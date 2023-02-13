@@ -1,0 +1,38 @@
+{
+  "name": "meili-search-client",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gatsby.js search frontend for a MeiLi Search Backend",
+  "author": "Mike Polinowski <mpolinowski@gmail.com>",
+  "keywords": [
+    "gatsby",
+    "meilisearch"
+  ],
+  "scripts": {
+    "build": "node --max-old-space-size=8192 node_modules/gatsby/dist/bin/gatsby build",
+    "develop": "node --max-old-space-size=8192 node_modules/gatsby/dist/bin/gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "docker": "mv public/* docker/container/data/public && docker build -t wiki_en docker/. && mv docker/container/data/public/* public"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@meilisearch/instant-meilisearch": "^0.8.0",
+    "gatsby": "^4.3.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-mdx": "^3.3.0",
+    "gatsby-plugin-meilisearch": "^0.3.1",
+    "gatsby-plugin-sharp": "^4.3.0",
+    "gatsby-remark-images": "^6.3.0",
+    "gatsby-source-filesystem": "^4.3.0",
+    "instantsearch.css": "^7.4.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-instantsearch-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.16.0"
+  }
+}
