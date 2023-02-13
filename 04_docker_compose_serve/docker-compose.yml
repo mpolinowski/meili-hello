@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  meilisearch:
+    container_name: meilisearch
+    image: getmeili/meilisearch:latest
+    environment:
+      - MEILI_MASTER_KEY=RhTX1pLPSKSn7KW9yf9u_MNKC0v1YKkmx2Sc6qSwbLQ
+      - MEILI_NO_ANALYTICS=true
+      # - MEILI_ENV=development
+      - MEILI_ENV=production
+    network_mode: "host"
+    # ports:
+    #   - ${MEILI_PORT:-7700}:7700
+    # networks:
+    #   - meilisearch
+    volumes:
+      - /opt/meili_data:/meili_data
+    restart: unless-stopped
+
+  gatsby_frontend:
+    container_name: my_blog
+    image: my_blog:latest
+    network_mode: "host"    
+    # ports:
+    #   - 80:8888
+    # networks:
+    #   - meilisearch
+    restart: unless-stopped
+
+# networks:
+#   meilisearch:
+#     driver: bridge

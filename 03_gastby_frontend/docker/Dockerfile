@@ -4,7 +4,7 @@ FROM golang:alpine AS build
 # Project labels
 LABEL maintainer="m.polinowski@gmail.com"
 
-# `build` should be replaced with your project name
+# `build` can be replaced with your project name
 WORKDIR /go/src/build
 
 # Copy all the Code and stuff to compile everything
@@ -25,7 +25,7 @@ WORKDIR /app
 RUN mkdir ./data
 COPY ./container/data ./data
 
-# `build` should be replaced here as well
+# `build` can be replaced here as well
 COPY --from=build /go/src/build/app .
 
 # Exposes port 8888 because our program listens on that port
