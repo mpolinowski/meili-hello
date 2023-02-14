@@ -15,7 +15,7 @@ cover: https://mpolinowski.github.io/assets/images/photo-kt443t6d_64hdh43hfh6dgj
 [MeiLi Search](https://docs.meilisearch.com/learn/getting_started/quick_start.html) is an open-source search engine. And [Instant Meilisearch](https://github.com/meilisearch/instant-meilisearch) is the search client that you should use to make MeiLi Search work with [InstantSearch](https://github.com/algolia/instantsearch.js). InstantSearch, an open-source project developed by Algolia, is the tool that renders all the components needed to start searching in your front-end application.
 
 
-> If you did not setup the MeiLi backend - [please do this first](/docs/DevOps/Elasticsearch/2023-02-10--meili-rusty-elastic-docker/2023-02-10/).
+> If you did not setup the MeiLi backend - [please do this first](https://mpolinowski.github.io/docs/DevOps/Elasticsearch/2023-02-10--meili-rusty-elastic-docker/2023-02-10/).
 
 
 
